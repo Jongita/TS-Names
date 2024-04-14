@@ -9,10 +9,13 @@ suzinotiKilme.onclick=()=>{
         .then((response)=>{
             return response.json();
         })
-        .then( (data:Name[])=>{
-            console.log(data);
-            
-        
-           
-    });
+        .then( (data:Name)=>{
+            let str="";
+            data.country.forEach((n)=>{
+                str+=`${n.country_id} ${((n.probability)*100).toFixed(2)} % <br>`
+               
+            })
+            htmlResult.innerHTML=str;
+            });
+
 };
