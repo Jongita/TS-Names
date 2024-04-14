@@ -4,15 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vardo kilme</title>
     <script type="module" src="./dist/names.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <input type="text" id="name">
-    <button id="suzinoti">Sužinoti vardo kilme</button>
 
-    <div id="result"></div>
+<body>
+    <div class="container">
+        <h2>Vardo kilmė</h2>
+        <div class="table">
+            <label for="">Įveskite vardą arba pavardę:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="btn">
+            <button id="suzinoti">Sužinoti vardo kilmę</button>
+        </div>
+        <div class="resultsContainer">
+            <label for="">Rezultatas</label>
+            <div id="result"></div>
+        </div>
+    </div>
 </body>
 
 </html>
