@@ -65,3 +65,7 @@ body {
 .resultsContainer label{
    font-size: 20px;
 }
+
+.resultTable {
+    padding: 50px 50px;
+}
