@@ -5,7 +5,7 @@ const suzinotiKilme=document.getElementById("suzinoti")!;
 
 
 suzinotiKilme.onclick=()=>{
-        fetch(`https://api.nationalize.io/?name=${nameDOM.value}`)
+        fetch(`https://api.ntionalize.io/?name=${nameDOM.value}`)
           .then((response) => {
             if (response.status === 429) {
                 let e = new Error(`Viršytas užklausų skaičius!`)
@@ -31,6 +31,13 @@ suzinotiKilme.onclick=()=>{
                
             })
             htmlResult.innerHTML=str;
-            });
+            }
+        )
+        .catch((e)=>{
+            htmlResult.innerHTML= "Įvyko klaida, failas nerastas";
+            htmlResult.className = "alarm"
+            nameDOM.value = '';
+        })
 
+        
 };
