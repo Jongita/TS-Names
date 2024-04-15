@@ -2,7 +2,7 @@ const htmlResult = document.getElementById("result");
 const nameDOM = document.getElementById("name");
 const suzinotiKilme = document.getElementById("suzinoti");
 suzinotiKilme.onclick = () => {
-    fetch(`https://api.ntionalize.io/?name=${nameDOM.value}`)
+    fetch(`https://api.nationalize.io/?name=${nameDOM.value}`)
         .then((response) => {
         if (response.status === 429) {
             let e = new Error(`Viršytas užklausų skaičius!`);
